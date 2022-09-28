@@ -15,9 +15,7 @@ import lombok.ToString;
 
 
 
-@ToString
-@NoArgsConstructor
-@AllArgsConstructor
+
 @Entity
 public class Categorie {
 
@@ -52,4 +50,21 @@ public class Categorie {
 		return 0;
 		
 	}
+
+	@Override
+	public String toString() {
+		return "Categorie [id=" + id + ", nom=" + nom + ", liste=" + liste + "]";
+	}
+
+	public Categorie(int id, String nom) {
+		super();
+		this.id = id;
+		this.nom = nom;
+	}
+
+	public Categorie() {
+		super();
+	}
+	
+	
 }

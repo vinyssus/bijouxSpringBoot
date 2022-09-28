@@ -11,9 +11,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
+
 @Entity
 public class Bijoux {
 
@@ -41,5 +39,23 @@ public class Bijoux {
 	public void setPrix(double prix) {
 		this.prix = prix;
 	}
+
+	@Override
+	public String toString() {
+		return "Bijoux [id=" + id + ", nom=" + nom + ", prix=" + prix + ", categorie=" + categorie + "]";
+	}
+
+	public Bijoux(Integer id, String nom, double prix, Categorie categorie) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.prix = prix;
+		this.categorie = categorie;
+	}
+
+	public Bijoux() {
+		super();
+	}
+	
 	
 }
