@@ -27,7 +27,7 @@ public class CategorieControlleur {
 	public String getAllcategorie(Model m) {
 		List<Categorie> listec = cs.getAllCategorie();
 		m.addAttribute("listec", listec);
-		m.addAttribute("categorie", cr.findAll());
+	//	m.addAttribute("categorie", cr.findAll());
 		return "categories";
 	}
 	
@@ -43,11 +43,11 @@ public class CategorieControlleur {
 		return "categories";
 	}
 	
-	@GetMapping("modifiercategorie")
+	@GetMapping("/modifiercategorie/{id}")
 	public String modifiercategorie(Model m , @PathVariable("idc") int id) {
 		m.addAttribute("categorie", cs.getCategorie(id));
 		m.addAttribute("listec", cs.getAllCategorie());
-		return "cetegorie";	
+		return "cetegories";	
 	}
 	
 	@PostMapping("/ajoutercategorie")

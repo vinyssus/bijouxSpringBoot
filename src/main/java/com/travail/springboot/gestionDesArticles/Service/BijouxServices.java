@@ -3,10 +3,12 @@ package com.travail.springboot.gestionDesArticles.Service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.travail.springboot.gestionDesArticles.Entity.Bijoux;
 import com.travail.springboot.gestionDesArticles.dao.BijouxRepository;
 
+@Service
 public class BijouxServices implements IservicesBijoux{
 
 	@Autowired BijouxRepository bj;

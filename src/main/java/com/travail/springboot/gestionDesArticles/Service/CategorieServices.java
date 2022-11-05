@@ -3,10 +3,12 @@ package com.travail.springboot.gestionDesArticles.Service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.travail.springboot.gestionDesArticles.Entity.Categorie;
 import com.travail.springboot.gestionDesArticles.dao.CategorieRepository;
 
+@Service
 public class CategorieServices implements IservicesCategorie{
 
 	@Autowired CategorieRepository cr;
